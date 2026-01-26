@@ -4,7 +4,7 @@
 ---
 
 ## **Why This Project?**
-In quantitative finance, Unsupervised Learning is a powerful tool for **Anomaly Detection** and **Market Segmentation**. I used this project to see if a mathematical model could successfully "discover" the difference between Public and Private universities without being given the labels—much like how a bank might use clustering to identify unusual transaction patterns or customer risk profiles.
+Unsupervised Learning is a powerful tool for **Anomaly Detection** and **Market Segmentation**. I used this project to see if a mathematical model could successfully "discover" the difference between Public and Private universities without being given the labels—much like how a bank might use clustering to identify unusual transaction patterns or customer risk profiles.
 
 ---
 
@@ -39,7 +39,7 @@ To evaluate the "Unsupervised" results, I converted the labels and generated a C
 
 ---
 
-## **Key Takeaways for Global Markets**
+## **Key Takeawayss**
 * **Pattern Recognition:** Demonstrated how unsupervised models can find structural similarities in complex data without human guidance.
 * **Audit Mindset:** Showcased the ability to find and fix data anomalies—an essential skill for ensuring the accuracy of financial models.
 * **Quantitative Communication:** Translated raw cluster centroids into clear visual insights for a diverse audience.
