@@ -1,51 +1,61 @@
-# **Unsupervised Learning: University Clustering & Data Audit**
-*Applying K-Means clustering to identify institutional patterns and performing data integrity audits on academic datasets.*
+# Unsupervised Learning: University Clustering & Data Quality Checks
+
+Applied K-Means clustering to group universities based on financial and academic features, with a focus on data cleaning, anomaly detection, and model interpretation.
 
 ---
 
-## **Why This Project?**
-Unsupervised Learning is a powerful tool for **Anomaly Detection** and **Market Segmentation**. I used this project to see if a mathematical model could successfully "discover" the difference between Public and Private universities without being given the labels—much like how a bank might use clustering to identify unusual transaction patterns or customer risk profiles.
+## Project Motivation
+I completed this project to better understand how unsupervised learning can identify patterns in data without predefined labels. The goal was to see whether a clustering algorithm could separate public and private universities based only on numerical features, similar to how clustering can be used in finance to flag unusual behaviour or segment customers.
 
 ---
 
-## **Scientific Rigor: The Data Audit**
-A key part of this project involved auditing the dataset for mathematical impossibilities—a critical step in any financial modeling workflow.
+## Data Exploration and Cleaning
+Before modelling, I performed exploratory data analysis and basic data validation to ensure the dataset was reliable.
 
-### **The "Cazenovia" Outlier**
+### Identifying Data Errors
 ![Corrected Grad Rate](corrected_grad_rate.png)
-During Exploratory Data Analysis (EDA), I identified a school (Cazenovia College) with a graduation rate of over 100%. 
-* **The Fix:** I performed a data correction to cap the rate at 100%. 
-* **The Insight:** This demonstrates my commitment to data integrity—ensuring the model isn't trained on "garbage" data, which is essential for risk management.
+
+During EDA, I identified a university (Cazenovia College) with a reported graduation rate greater than 100%, which is not possible.
+
+- **Correction:** The graduation rate was capped at 100%.
+- **Reasoning:** Cleaning obvious data errors helps prevent misleading model results and is a necessary step before any form of modelling.
 
 ---
 
-## **Clustering Analysis**
-I used the **K-Means algorithm** to group 777 universities based on 18 variables, including Room & Board costs, Graduation Rates, and Faculty PhD percentages.
+## Clustering Analysis
+I applied **K-Means clustering** to a dataset of 777 universities using 18 numerical features, including tuition fees, room and board costs, graduation rates, and faculty qualifications.
 
-### **1. Feature Differentiation**
+### 1. Feature Separation
 ![Tuition Distribution](tuition_distribution.png)
-I analyzed **Out-of-State Tuition** as a primary separator. This plot shows a clear variance between school types, which helped the model establish distinct cluster centroids.
 
-### **2. Model vs. Reality**
+Out-of-state tuition was analysed as a key variable contributing to separation between clusters, showing clear differences between university types.
+
+### 2. Comparing Clusters to Known Labels
 ![Cluster Comparison](cluster_comparison.png)
-Since the dataset included labels, I was able to create a "Reality Check" comparison. This visual shows where the K-Means algorithm successfully identified the "Private" cluster based solely on the mathematical features.
+
+Although K-Means is an unsupervised algorithm, the dataset contained known labels. This allowed me to compare the resulting clusters against the true public/private classifications to assess how well the model performed.
 
 ---
 
-## **Model Performance Evaluation**
+## Model Evaluation
 ![K-Means Confusion Matrix](kmeans_confusion_matrix.png)
-To evaluate the "Unsupervised" results, I converted the labels and generated a Confusion Matrix.
-* **Observation:** The model effectively identified clusters, though the overlap in the scatterplot explains why some schools are harder to categorize mathematically.
+
+To evaluate performance, I mapped cluster labels to known categories and generated a confusion matrix.
+
+- The results showed that the model captured the overall structure of the data well.
+- Some overlap between clusters highlights the limits of separating institutions using only numerical features.
 
 ---
 
-## **Key Takeawayss**
-* **Pattern Recognition:** Demonstrated how unsupervised models can find structural similarities in complex data without human guidance.
-* **Audit Mindset:** Showcased the ability to find and fix data anomalies—an essential skill for ensuring the accuracy of financial models.
-* **Quantitative Communication:** Translated raw cluster centroids into clear visual insights for a diverse audience.
+## Key Takeaways
+- Unsupervised learning can uncover meaningful structure in data without labelled outcomes.
+- Data cleaning and validation are essential before applying any machine learning model.
+- Visualisation is critical for interpreting clustering results and communicating findings clearly.
 
 ---
 
-## **How to Run**
-1. Install dependencies: `pip install -r requirements.txt`
-2. Run `K_Means_Clustering_Project.ipynb` in Jupyter Notebook.
+## How to Run
+1. Install dependencies:
+```bash
+pip install -r requirements.txt
+
